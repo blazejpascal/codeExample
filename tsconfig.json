@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "Shared/*": [
+        "src/components/shared/*"
+      ]
+    },
     "target": "es5",
     "lib": [
       "dom",

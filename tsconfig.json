@@ -4,6 +4,9 @@
     "paths": {
       "Shared/*": [
         "src/components/shared/*"
+      ],
+      "Scenes/*": [
+        "src/components/scenes/*"
       ]
     },
     "target": "es5",

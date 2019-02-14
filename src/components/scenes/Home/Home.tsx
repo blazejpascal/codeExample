@@ -8,8 +8,7 @@ interface IHomeState {
     fetching: boolean,
     donations: Array<string>,
     errors: string
-}
-
+} 
 
 export default class Home extends Component<{}, IHomeState> {
     state ={
@@ -47,4 +46,3 @@ export default class Home extends Component<{}, IHomeState> {
     )
   }
 }
-

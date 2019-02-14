@@ -1,21 +1,19 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, {Component} from 'react';
+import './App.scss';
 
-import Home from 'Scenes/Home/Home'
+import Home from './components/scenes/Home/Home'
 
-import { Route, Switch, Redirect } from 'react-router-dom'
+import {Route, Switch, Redirect} from 'react-router-dom'
 
-class App extends Component {
-  render() {
+const App = () => {
     return (
-      <div className="App">
-       <Switch >
-            <Route path="/home" component={Home} />
-            <Redirect from="/" exact to="/home"/>
-      </Switch>
-      </div>
+        <div className="App">
+            <Switch>
+                <Route path="/home" component={Home}/>
+                <Redirect from="/" exact to="/home"/>
+            </Switch>
+        </div>
     );
-  }
 }
 
 export default App;

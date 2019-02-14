@@ -1,0 +1,38 @@
+@import '../../../../commonStyles/colors.scss';
+
+.donation-entry {
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid $border-gray;
+  margin: 1rem 1rem;
+  padding: 0.5rem;
+
+  &__amount {
+    border-bottom: 1px solid $border-gray;
+    margin: .5rem 0 1rem 0;
+    padding: 0.5rem;
+  }
+
+  &__donor-details {
+    border-bottom: 1px solid $border-gray;
+    margin: 1rem 0 .5rem 0;
+    padding: 0.5rem;
+  }
+
+  &__donor-name {
+    margin: 1rem 0 0 0;
+  }
+
+  &__date {
+    font-size: .75rem;
+    padding: 0.5rem 0 0 0;
+  }
+
+  &__message {
+    margin: 1rem;
+    padding: 0.5rem;
+  }
+}

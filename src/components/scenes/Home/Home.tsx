@@ -1,48 +1,55 @@
-
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import axios from 'axios'
-import { Donations } from './components/Donations/Donations'
+import {DonationsList} from './components/DonationsList/DonationsList'
 import './Home.scss'
 
-interface IHomeState {
-    fetching: boolean,
-    donations: Array<string>,
-    errors: string
-} 
+export interface Donation {
+    amount: string
+    currencyCode: string,
+    donationDate: string,
+    donorDisplayName: string,
+    imageUrl: string,
+    message: string
+}
 
-export default class Home extends Component<{}, IHomeState> {
-    state ={
+interface HomeState {
+    fetching: boolean,
+    donations: Donation[],
+    errors: string
+}
+
+export default class Home extends Component<{}, HomeState> {
+    state = {
         fetching: false,
         donations: [],
         errors: ''
     }
 
-    componentDidMount() {
-        this.fetchDonations()
+    async componentDidMount() {
+        await this.fetchDonations('https://api.justgiving.com/66651531/v1/charity/183560/donations')
     }
 
-    fetchDonations = async () => {
+    fetchDonations = async (url: string) => {
         this.setState({
-            fetching: !this.state.fetching
+            fetching: true
         })
         try {
-           const response = await axios.get('https://api.justgiving.com/66651531/v1/charity/183560/donations', {})
-                console.log(response.data)
-                this.setState({
-                    fetching: !this.state.fetching,
-                    donations: response.data.donations
-                })
+            const response = await axios.get(url, {});
+            this.setState({
+                fetching: !this.state.fetching,
+                donations: response.data.donations
+            })
 
         } catch (error) {
             this.setState({errors: error})
         }
-    }   
+    }
 
-  render() {
-    return (
-      <div className="home">
-        <Donations donations={this.state.donations}  />
-      </div>
-    )
-  }
+    render() {
+        return (
+            <div className="home">
+                <DonationsList donations={this.state.donations}/>
+            </div>
+        )
+    }
 }

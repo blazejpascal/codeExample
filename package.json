@@ -55,6 +55,7 @@
     "react-dev-utils": "^7.0.3",
     "react-dom": "^16.8.1",
     "react-router-dom": "^4.3.1",
+    "react-test-renderer": "^16.8.2",
     "resolve": "1.10.0",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.1",
@@ -89,6 +90,7 @@
     "setupFiles": [
       "react-app-polyfill/jsdom"
     ],
+    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.ts",
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
       "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"
@@ -107,8 +109,8 @@
     "moduleNameMapper": {
       "^react-native$": "react-native-web",
       "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy",
-      "^@Shared/(.*)$": "<rootDir>/src/shared/$1",
-      "^@Scenes/(.*)$": "<rootDir>/src/scenes/$1"
+      "^@Shared/(.*)$": "<rootDir>/src/shared$1",
+      "^@Scenes/(.*)$": "<rootDir>/src/scenes$1"
     },
     "moduleFileExtensions": [
       "web.js",
@@ -122,10 +124,7 @@
       "jsx",
       "node"
     ],
-    "watchPlugins": [
-      "C:\\Users\\Zordon\\Desktop\\Frontend\\JustGivin\\just-giving-ts\\node_modules\\jest-watch-typeahead\\filename.js",
-      "C:\\Users\\Zordon\\Desktop\\Frontend\\JustGivin\\just-giving-ts\\node_modules\\jest-watch-typeahead\\testname.js"
-    ]
+    "watchPlugins": []
   },
   "babel": {
     "presets": [

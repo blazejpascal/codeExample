@@ -1,14 +1,14 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import {shallow} from 'enzyme'
 
-import { Donations } from './Donations'
+import {DonationsList} from './DonationsList'
 
 describe('Donations', () => {
-    it( 'should render given components', () => {
+    it('should render given components', () => {
         //given 
         const donations = [
-           { 
-               amount:25,
+            {
+                amount: 25,
                 currencyCode: "GBP",
                 donationDate: "/Date(1530907783000+0000)/",
                 donorDisplayName: "P. Winfield",
@@ -20,9 +20,9 @@ describe('Donations', () => {
             }
         ]
 
-        const wrapper = shallow(<Donations donations={donations} />)
+        const wrapper = shallow(<DonationsList donations={donations}/>)
 
         //then
-        expect(wrapper.find('.donations').children()).toHaveLength(2)
+        expect(wrapper.find('.donations').children()).toHaveLength(1)
     })
 })

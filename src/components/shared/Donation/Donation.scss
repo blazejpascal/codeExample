@@ -11,7 +11,7 @@
 
     &__amount {
        border-bottom: 1px solid #d1d1d1;
-      
+       margin: .5rem 0 1rem 0 ;
        &--with-padding {
            padding: 0.5rem;
        }
@@ -19,14 +19,28 @@
 
     &__donor-details {
         border-bottom: 1px solid #d1d1d1;
+        margin: 1rem 0 .5rem  0;
 
         &--with-padding {
             padding: 0.5rem;
         }
     }
 
-    &__message{
-        
+    &__donor-name {
+        margin: 1rem 0 0 0;
+    }
+
+    &__date {
+        font-size: .75rem;
+
+        &--with-padding {
+            padding: 0.5rem;
+        }
+
+    }
+
+    &__message {
+        margin: 1rem;
         &--with-padding {
             padding: 0.5rem;
         }

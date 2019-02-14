@@ -11,7 +11,7 @@ export function Donations(props: IDonations) {
   const { donations } = props
   return (
     <>
-        <h1>last donations</h1>  
+        <h1>Last donations:</h1>  
         <div className="donations"> 
         {
             donations.map(donation =>

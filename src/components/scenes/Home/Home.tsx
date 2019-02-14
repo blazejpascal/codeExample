@@ -1,8 +1,8 @@
 
 import React, { Component } from 'react'
 import axios from 'axios'
-
 import { Donations } from './components/Donations/Donations'
+import './Home.scss'
 
 interface IHomeState {
     fetching: boolean,
@@ -41,7 +41,7 @@ export default class Home extends Component<{}, IHomeState> {
 
   render() {
     return (
-      <div>
+      <div className="home">
         <Donations donations={this.state.donations}  />
       </div>
     )

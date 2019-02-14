@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-import Donations from './components/Donations/Donations'
+import { Donations } from './components/Donations/Donations'
 
 interface IHomeState {
     fetching: boolean,
@@ -10,11 +10,8 @@ interface IHomeState {
     errors: string
 }
 
-interface IHomeProps {
 
-}
-
-export default class Home extends Component<IHomeProps, IHomeState> {
+export default class Home extends Component<{}, IHomeState> {
     state ={
         fetching: false,
         donations: [],
@@ -45,7 +42,7 @@ export default class Home extends Component<IHomeProps, IHomeState> {
   render() {
     return (
       <div>
-        <Donations />
+        <Donations donations={this.state.donations}  />
       </div>
     )
   }

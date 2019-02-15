@@ -10,5 +10,10 @@ To start:
 ```
 yarn && yarn start
 ```
+
+To test:
+```
+yarn test
+```
  
  

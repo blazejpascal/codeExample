@@ -1,4 +1,4 @@
-# JustGiving recrutation test
+# Recrutation test
 
  A SPA written in React which includes:
  * TypeScript

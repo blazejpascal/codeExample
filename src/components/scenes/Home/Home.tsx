@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import {DonationsList} from './components/DonationsList/DonationsList'
+import toastr from 'toastr'
 import './Home.scss'
 
 export interface Donation {
@@ -26,7 +27,7 @@ export default class Home extends Component<{}, HomeState> {
     }
 
     async componentDidMount() {
-        await this.fetchDonations('https://api.justgiving.com/66651531/v1/charity/183560/donations')
+        await this.fetchDonations('https://api.justgiving.com/66651531/v1/charity/183560/donation')
     }
 
     fetchDonations = async (url: string) => {
@@ -42,6 +43,8 @@ export default class Home extends Component<{}, HomeState> {
 
         } catch (error) {
             this.setState({errors: error})
+            toastr.error(`${error}`);
+            
         }
     }
 

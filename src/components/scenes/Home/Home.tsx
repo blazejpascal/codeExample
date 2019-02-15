@@ -5,7 +5,7 @@ import toastr from 'toastr'
 import './Home.scss'
 
 export interface Donation {
-    amount: string
+    amount: number,
     currencyCode: string,
     donationDate: string,
     donorDisplayName: string,
@@ -44,7 +44,6 @@ export default class Home extends Component<{}, HomeState> {
         } catch (error) {
             this.setState({errors: error})
             toastr.error(`${error}`);
-            
         }
     }
 

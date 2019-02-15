@@ -1,5 +1,5 @@
 import React from 'react'
-import {DonationEntry} from '../Donation/Donation'
+import {DonationEntry} from '../Donation/DonationEntry'
 
 import './DonationsList.scss'
 

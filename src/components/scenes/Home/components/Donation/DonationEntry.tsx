@@ -1,7 +1,7 @@
 import React from 'react'
 import {Donation as DonationEntryProps} from '../../Home'
 
-import './Donation.scss'
+import './DonationEntry.scss'
 
 export function DonationEntry(props: DonationEntryProps) {
     const {

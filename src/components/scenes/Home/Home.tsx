@@ -27,7 +27,7 @@ export default class Home extends Component<{}, HomeState> {
     }
 
     async componentDidMount() {
-        await this.fetchDonations('https://api.justgiving.com/66651531/v1/charity/183560/donation')
+        await this.fetchDonations('https://api.justgiving.com/66651531/v1/charity/183560/donations')
     }
 
     fetchDonations = async (url: string) => {

@@ -49,6 +49,10 @@ export default class Home extends Component<{}, HomeState> {
 
     render() {
         return (
+            (this.state.fetching) 
+            ?
+            <div>Loading....</div>
+            :
             <div className="home">
                 <DonationsList donations={this.state.donations}/>
             </div>
